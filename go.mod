@@ -1,4 +1,4 @@
-module github.com/GLCharge/go-fluxy
+module github.com/xBlaz3kx/fluxy
 
 go 1.20
 

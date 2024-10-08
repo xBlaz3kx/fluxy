@@ -5,6 +5,16 @@ import (
 	"strings"
 )
 
+const (
+	GroupByTime        = "_time"
+	GroupByField       = "_field"
+	GroupByMeasurement = "_measurement"
+)
+
+const (
+	FilterByMeasurement = "__measurement"
+)
+
 type FilterOperator string
 type FilterCondition string
 type GroupCondition string

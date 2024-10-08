@@ -1,4 +1,4 @@
-package go_fluxy
+package fluxy
 
 import (
 	"fmt"

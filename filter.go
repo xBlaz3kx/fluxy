@@ -12,7 +12,7 @@ const (
 )
 
 const (
-	FilterByMeasurement = "__measurement"
+	FilterByMeasurement = "_measurement"
 )
 
 type FilterOperator string

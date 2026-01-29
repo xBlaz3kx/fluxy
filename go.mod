@@ -1,10 +1,7 @@
 module github.com/xBlaz3kx/fluxy
 
-go 1.22.1
+go 1.25.6
 
-require github.com/samber/lo v1.47.0
+require github.com/samber/lo v1.52.0
 
-require (
-	golang.org/x/exp v0.0.0-20240112132812-db7319d0e0e3 // indirect
-	golang.org/x/text v0.16.0 // indirect
-)
+require golang.org/x/text v0.22.0 // indirect

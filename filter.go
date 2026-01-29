@@ -142,15 +142,16 @@ func (fb *FilterBuilder) Build() string {
 	var buffer strings.Builder
 
 	for _, f := range fb.filters {
-		if f.Group == Start {
+		switch {
+		case f.Group == Start:
 			buffer.WriteString("(")
-		} else if f.Group == End {
+		case f.Group == End:
 			buffer.WriteString(")")
-		} else if f.Complete != "" {
+		case f.Complete != "":
 			buffer.WriteString(fmt.Sprintf(`(%s)`, f.Complete))
-		} else if f.Condition != "" {
+		case f.Condition != "":
 			buffer.WriteString(fmt.Sprintf(" %s ", f.Condition))
-		} else if f.Field != "" && f.Operator != "" {
+		case f.Field != "" && f.Operator != "":
 			buffer.WriteString(fmt.Sprintf(`r.%s %s "%s"`, f.Field, f.Operator, f.Value))
 		}
 	}
